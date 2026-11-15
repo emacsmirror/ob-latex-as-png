@@ -17,6 +17,26 @@ f = r
 [[file:test.png]]
 
 
+#+begin_export md
+> [!IMPORTANT]
+> `ob-latex-as-png` is subsumed by the [`#+begin_image`](https://alhassy.com/org-special-block-extras#images) block of
+> [`org-special-block-extras`](https://github.com/alhassy/org-special-block-extras); this repository will be archived.
+>
+> ```org
+> #+begin_image latex :file bubbles :resolution 150
+> \usepackage{smartdiagram}
+> -----
+> \smartdiagram[bubble diagram]{Emacs, Org-mode, \LaTeX, Pretty Images, HTML}
+> #+end_image
+> ```
+>
+> - **Better images:** an SVG, inlined, in HTML; the LaTeX itself, raw, in a PDF; a PNG elsewhere, such as Markdown.
+> - **HTML too:** `#+begin_image html` is a picture of itself in a PDF, by a headless Chrome.
+> - **Fresh by default:** renderings are named by the block's hash, so an edit renders it afresh; `:file tree` names
+>   them exactly, a figure to link to, which an edit leaves stale till `C-c C-c`.
+> - **Same habits:** the per-block preamble sits above a line of `-----`, rather than `% in`; `:resolution` is as ever.
+#+end_export
+
 * top matter                                                         :ignore:
   :PROPERTIES:
   :CUSTOM_ID: top-matter
